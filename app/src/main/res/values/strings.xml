@@ -19,8 +19,9 @@
     <string name="iPrice_sItemTbl_02">Indicative Price</string>
     <string name="saveBtn">Save</string>
     <string name="siteName">Site Name</string>
-    <string name="departmentHead">Department Head</string>
-    <string name="requiredBefore">Required Before</string>
+    <string name="departmentHead">Site Manager Name</string>
+    <string name="requiredBefore">Required Before/Delivery Date</string>
+    <string name="orderDate">Order Date</string>
     <string name="comments">Comments</string>
     <string name="catTableHead">Catalogue Items (List of items to be purchased)</string>
     <string name="totCatAmount">Total Catalogue Amount - LKR </string>
