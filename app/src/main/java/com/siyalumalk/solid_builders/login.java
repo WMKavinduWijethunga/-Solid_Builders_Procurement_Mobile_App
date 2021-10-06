@@ -57,7 +57,7 @@ public class login extends AppCompatActivity {
                             String[] data = new String[2];
                             data[0] = strUsername;
                             data[1] = strPassword;
-                            PutData putData = new PutData("http://192.168.8.105/SolidBuilders/login.php", "POST", field, data);
+                            PutData putData = new PutData("http://192.168.8.189/SolidBuilders/login.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     String result = putData.getResult();
