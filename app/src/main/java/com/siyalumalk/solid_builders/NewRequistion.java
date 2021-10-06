@@ -42,19 +42,27 @@ public class NewRequistion extends AppCompatActivity {
         btnSave = findViewById(R.id.btnNewReqSave);
         btnMakeRequistion = findViewById(R.id.btnNewReqMakeRequistion);
 
+
+
         btnMakeRequistion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+
                 //get values to string
-                String strSiteName = String.valueOf(siteNameSelect);
-                String strDeptHead = String.valueOf(inputDeptHead);
-                String strDelDate = String.valueOf(inputDelDate);
-                String strOrderDate = String.valueOf(inputOrderDate);
-                String strComment = String.valueOf(inputComment);
-                String strTotal = String.valueOf(catTotAmount_View);
+
+                //String strSiteName = String.valueOf(siteNameSelect);
+                String strSiteName = "fsdfs";
+                String strDeptHead = inputDeptHead.getText().toString();
+                String strDelDate = inputDelDate.getText().toString();
+                String strOrderDate = inputOrderDate.getText().toString();
+                String strComment = inputComment.getText().toString();
+                //String strTotal = String.valueOf(catTotAmount_View);
+                String strTotal = "7000";
+                System.out.println(strTotal + strDeptHead + strDelDate + strOrderDate + strComment);
 
                 if(!strSiteName.equals("") && !strDeptHead.equals("") && !strDelDate.equals("") && !strOrderDate.equals("") && !strComment.equals("")){
+
 
                     Handler handler = new Handler(Looper.getMainLooper());
                     handler.post(new Runnable() {
@@ -70,13 +78,16 @@ public class NewRequistion extends AppCompatActivity {
 
                             String[] data = new String[6];
                             data[0] = strSiteName;
-                            data[0] = strDeptHead;
-                            data[0] = strDelDate;
-                            data[0] = strOrderDate;
-                            data[0] = strComment;
-                            data[0] = strTotal;
+                            data[1] = strDeptHead;
+                            data[2] = strDelDate;
+                            data[3] = strOrderDate;
+                            data[4] = strComment;
+                            data[5] = strTotal;
 
-                            PutData putData = new PutData("http://192.168.8.105/SolidBuilders/addNewRequstitionDetails.php", "POST",field,data);
+                            System.out.println("Heloooooooooooooooooooooooooooooooooooooooooooo");
+                            System.out.println(strSiteName + strDeptHead + strDelDate + strOrderDate +strComment +strTotal);
+
+                            PutData putData = new PutData("http://192.168.8.189/SolidBuilders/addNewRequstitionDetails.php", "POST",field,data);
 
                             if(putData.startPut()){
 
