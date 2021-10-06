@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PurchaseOrder">
+
+    <TextView
+        android:id="@+id/reqNoTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/ReqNo"
+        android:textColor="@color/reqSubHeadGreen"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/inputRequsitionNo"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/input_box"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/reqDateBeforeTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/requestedBefore"
+        android:textColor="@color/reqSubHeadGreen"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/inputRequestedBefore"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/input_box"
+        android:ems="10"
+        android:drawableEnd="@drawable/ic_datecal"
+        android:paddingEnd="8dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="3dp"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/siteManNameTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/siteMName"
+        android:textColor="@color/reqSubHeadGreen"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/inputSiteManagerName"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/input_box"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/reqSiteNameTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/reqSiteName"
+        android:textColor="@color/reqSubHeadGreen"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/inputReqSiteName"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/input_box"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/mobileNumberTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="150dp"
+        android:text="@string/mobNumber"
+        android:textColor="@color/reqSubHeadGreen"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/inputMobileNumber"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="170dp"
+        android:background="@drawable/input_box"
+        android:ems="10"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/emailTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="150dp"
+        android:text="@string/email"
+        android:textColor="@color/reqSubHeadGreen"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/inputEmail"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="170dp"
+        android:background="@drawable/input_box"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/DeliveryAddressTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="200dp"
+        android:text="@string/deliveryAddress"
+        android:textColor="@color/reqSubHeadGreen"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/inputDeliveryAddress"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="220dp"
+        android:background="@drawable/input_box"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/postalCodeTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="200dp"
+        android:text="@string/postalCode"
+        android:textColor="@color/reqSubHeadGreen"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/inputPostalCode"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="220dp"
+        android:background="@drawable/input_box"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/vendorNameTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="250dp"
+        android:text="@string/vendorName"
+        android:textColor="@color/reqSubHeadGreen"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/inputVendorName"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="270dp"
+        android:background="@drawable/input_box"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/vendorCompanyNameTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="250dp"
+        android:text="@string/vendorCompanyName"
+        android:textColor="@color/reqSubHeadGreen"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/inputVendorCompanyName"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="270dp"
+        android:background="@drawable/input_box"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/vendorLocationTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="300dp"
+        android:text="@string/vendorLocation"
+        android:textColor="@color/reqSubHeadGreen"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/inputVendorLocation"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="320dp"
+        android:background="@drawable/input_box"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+            android:id="@+id/vendorMobileNoTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="300dp"
+        android:text="@string/vendorMobileNumber"
+        android:textColor="@color/reqSubHeadGreen"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/inputVendorMobileNo"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="320dp"
+        android:background="@drawable/input_box"
+        android:ems="10"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/descTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="350dp"
+        android:text="@string/description"
+        android:textColor="@color/reqSubHeadGreen"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/inputDescription"
+        android:layout_width="315dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="370dp"
+        android:background="@drawable/input_box"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/totcatDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="580dp"
+        android:drawableStart="@drawable/ic_money"
+        android:text="@string/totCatAmount"
+        android:textColor="@color/reqSubHeadGreen"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/totcatAmountPOView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="580dp"
+        android:text="100000"
+        android:textColor="@color/reqSubHeadGreen"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="620dp"
+        android:background="@drawable/btn_back"
+        android:text="@string/saveBtn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnMakeRequistion"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="195dp"
+        android:layout_marginTop="620dp"
+        android:background="@drawable/btn_back"
+        android:text="@string/btnMakeReqText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</RelativeLayout>

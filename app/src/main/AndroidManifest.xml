@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.siyalumalk.solid_builders">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Solid_Builders"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".EditRequistion"
+            android:exported="true" />
+        <activity
+            android:name=".PurchaseCatalog"
+            android:exported="true" />
+        <activity
+            android:name=".PurchaseOrder"
+            android:exported="true" />
+        <activity
+            android:name=".ManageRequistition"
+            android:exported="true" />
+        <activity
+            android:name=".NewRequistion"
+            android:exported="true" />
+        <activity
+            android:name=".Inventory"
+            android:exported="true" />
+        <activity
+            android:name=".Homepage"
+            android:exported="true" />
+        <activity
+            android:name=".login"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>

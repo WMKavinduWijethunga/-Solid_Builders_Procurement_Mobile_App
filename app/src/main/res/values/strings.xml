@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">Solid_Builders</string>
+    <string name="loginTitle">Login</string>
+    <string name="username">Username</string>
+    <string name="passwaord">Password</string>
+    <string name="homePage">Home Page</string>
+    <string name="homeTitle">Solid Builders</string>
+    <string name="inventoryDetHeading">Item Details</string>
+    <string name="itemID_inventorytbl_00">ItemID</string>
+    <string name="item_inventorytbl_01">Item</string>
+    <string name="unitPrice_inventorytbl_02">Unit Price</string>
+    <string name="inStock_inventorytbl_03">In Stock</string>
+    <string name="rol_inventorytbl_04">ROL</string>
+    <string name="action_inventorytbl_05">Action</string>
+    <string name="selectItemTblHeading">Selected Items (List of items to be purchased)</string>
+    <string name="addBtn">Add</string>
+    <string name="item_sItemTbl_00">Item</string>
+    <string name="qty_sItemTbl_01">Need Qty</string>
+    <string name="iPrice_sItemTbl_02">Indicative Price</string>
+    <string name="saveBtn">Save</string>
+    <string name="siteName">Site Name</string>
+    <string name="departmentHead">Department Head</string>
+    <string name="requiredBefore">Required Before</string>
+    <string name="comments">Comments</string>
+    <string name="catTableHead">Catalogue Items (List of items to be purchased)</string>
+    <string name="totCatAmount">Total Catalogue Amount - LKR </string>
+    <string name="btnMakeReqText">Make Requisition</string>
+    <string-array name="siteLocationArray">
+        <item>Choose Name...</item>
+        <item>ColomboConst</item>
+        <item>KandyConst</item>
+        <item>GalleConst</item>
+        <item>MataleConst</item>
+        <item>AnuradhapuraConst</item>
+        <item>JaffnaConst</item>
+    </string-array>
+    <string name="reqTblHead">Requisition List</string>
+    <string name="reqNo">Requisition No</string>
+    <string name="filterStatus">Filter by status</string>
+    <string-array name="purchaseReqStatusArray">
+        <item>Waiting</item>
+        <item>Approved</item>
+        <item>Declined</item>
+    </string-array>
+    <string name="dateFrom">Date From</string>
+    <string name="dateTo">Date To</string>
+    <string name="reqListTbl_reqNo_00">ReqNo</string>
+    <string name="reqListTbl_requester_01">Requester</string>
+    <string name="reqListTbl_site_02">Site</string>
+    <string name="reqListTbl_ReqDate_03">Req Date</string>
+    <string name="reqListTbl_status_04">Status</string>
+    <string name="reqListTbl_action_05">Action</string>
+    <string name="btnFilterTxt">Filter</string>
+    <string name="btnEditTxt">Edit</string>
+    <string name="btnDeleteTxt">Delete</string>
+    <string name="ReqNo">Requisition No</string>
+    <string name="requestedBefore">Requested Before</string>
+    <string name="siteMName">Site Manager Name</string>
+    <string name="reqSiteName">Request Site Name</string>
+    <string name="mobNumber">Mobile Number</string>
+    <string name="email">Email</string>
+    <string name="deliveryAddress">Delivery Address</string>
+    <string name="postalCode">Postal Code</string>
+    <string name="vendorName">Vendor Name</string>
+    <string name="vendorCompanyName">Vendor Company Name</string>
+    <string name="vendorLocation">Vendor Location</string>
+    <string name="vendorMobileNumber">Vendor Mobile Number</string>
+    <string name="description">Description</string>
+    <string name="purchaseOrderListHead">Purchase Order List</string>
+    <string name="purOrderList_poNo_00">PO-No</string>
+    <string name="purOrderList_ReqNo_01">ReqNo</string>
+    <string name="purOrderList_Item_02">Item</string>
+    <string name="purOrderList_unitPrice_03">Unit Price</string>
+    <string name="purOrderList_qty_04">Qty</string>
+    <string name="purOrderList_POdate_05">PO_Date</string>
+    <string name="purOrderList_Total_06">Total</string>
+    <string name="purOrderList_Status_07">Status</string>
+
+</resources>

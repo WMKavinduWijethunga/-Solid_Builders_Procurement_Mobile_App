@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewRequistion">
+
+    <TextView
+        android:id="@+id/siteNameTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/siteName"
+        android:textColor="@color/reqSubHeadGreen"
+        android:textSize="15dp" />
+
+    <Spinner
+        android:id="@+id/selectSiteLocation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/dropdown_back"
+        android:entries="@array/siteLocationArray"
+        android:paddingStart="14dp"
+        android:paddingTop="3dp" />
+
+    <TextView
+        android:id="@+id/departmentNameTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="110dp"
+        android:text="@string/departmentHead"
+        android:textColor="@color/reqSubHeadGreen"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/inputDepartmentHead"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="130dp"
+        android:background="@drawable/input_box"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/requiredBeforeTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="180dp"
+        android:text="@string/requiredBefore"
+        android:textColor="@color/reqSubHeadGreen"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/inputRequiredBefore"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/input_box"
+        android:drawableEnd="@drawable/ic_datecal"
+        android:ems="10"
+        android:inputType="date"
+        android:paddingEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/commentsTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="250dp"
+        android:text="@string/comments"
+        android:textColor="@color/reqSubHeadGreen"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/inputComments"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="270dp"
+        android:background="@drawable/input_box"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <!--Catalogue items table-->
+    <TextView
+        android:id="@+id/selectHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="330dp"
+        android:text="@string/catTableHead"
+        android:textColor="@color/black"
+        android:textSize="16dp" />
+
+    <TableLayout
+        android:id="@+id/catalogueItemTbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="350dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:background="@android:color/white">
+
+        <!--Table headers-->
+        <TableRow android:background="@color/btnGreen">
+
+            <!--Column 00-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/item_sItemTbl_00"
+                android:textColor="@color/white"
+                android:padding="2sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+            <!--Column 01-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/qty_sItemTbl_01"
+                android:textColor="@color/white"
+                android:padding="2sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+            <!--Column 02-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/iPrice_sItemTbl_02"
+                android:textColor="@color/white"
+                android:padding="2sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+        </TableRow>
+        <!--data-->
+        <TableRow
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp">
+
+            <!--Column 00-->
+            <TextView
+                android:id="@+id/col00_catTblItem"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Sand"
+                android:textColor="@color/black"
+                android:padding="2sp"
+                android:textSize="10sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+            <!--Column 01-->
+            <TextView
+                android:id="@+id/col01_catTblNeedQty"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Sand"
+                android:textColor="@color/black"
+                android:padding="2sp"
+                android:textSize="10sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+            <!--Column 02-->
+            <TextView
+                android:id="@+id/col02_catTblIPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="1000"
+                android:textColor="@color/black"
+                android:padding="2sp"
+                android:textSize="10sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/totcatDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="580dp"
+        android:drawableStart="@drawable/ic_money"
+        android:text="@string/totCatAmount"
+        android:textColor="@color/reqSubHeadGreen"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/totcatAmountView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="580dp"
+        android:text="100000"
+        android:textColor="@color/reqSubHeadGreen"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/btnNewReqSave"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="620dp"
+        android:background="@drawable/btn_back"
+        android:text="@string/saveBtn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnNewReqMakeRequistion"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="620dp"
+        android:background="@drawable/btn_back"
+        android:text="@string/btnMakeReqText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</RelativeLayout>

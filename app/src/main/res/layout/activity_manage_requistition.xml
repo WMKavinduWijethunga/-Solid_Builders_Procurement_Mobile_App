@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManageRequistition">
+
+    <TextView
+        android:id="@+id/reqNoTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/reqNo"
+        android:textColor="@color/reqSubHeadGreen"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/inputRequsitionNo"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/input_box"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/filterByStsTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/filterStatus"
+        android:textColor="@color/reqSubHeadGreen"
+        android:textSize="15dp" />
+
+    <Spinner
+        android:id="@+id/selectFilterStatus"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/dropdown_back"
+        android:entries="@array/purchaseReqStatusArray"
+        android:paddingStart="14dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3sp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/dateFromTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="90dp"
+        android:text="@string/dateFrom"
+        android:textColor="@color/reqSubHeadGreen"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/inputDateFrom"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="110dp"
+        android:background="@drawable/input_box"
+        android:drawableEnd="@drawable/ic_datecal"
+        android:ems="10"
+        android:inputType="date"
+        android:padding="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/dateToTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="90dp"
+        android:text="@string/dateTo"
+        android:textColor="@color/reqSubHeadGreen"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/inputDateTo"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="110dp"
+        android:background="@drawable/input_box"
+        android:drawableEnd="@drawable/ic_datecal"
+        android:ems="10"
+        android:inputType="date"
+        android:padding="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btnRqFilter"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/btn_back"
+        android:text="@string/btnFilterTxt"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--Requistion List table-->
+    <TextView
+        android:id="@+id/reqListHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="260dp"
+        android:text="@string/reqTblHead"
+        android:textColor="@color/black"
+        android:textSize="16dp" />
+
+    <TableLayout
+        android:id="@+id/requsitionListTbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@android:color/white">
+
+        <!--Table headers-->
+        <TableRow android:background="@color/btnGreen">
+
+            <!--Column 00-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/reqListTbl_reqNo_00"
+                android:textColor="@color/white"
+                android:padding="2sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+            <!--Column 01-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/reqListTbl_requester_01"
+                android:textColor="@color/white"
+                android:padding="2sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+            <!--Column 02-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/reqListTbl_site_02"
+                android:textColor="@color/white"
+                android:padding="2sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+            <!--Column 03-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/reqListTbl_ReqDate_03"
+                android:textColor="@color/white"
+                android:padding="2sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+            <!--Column 04-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/reqListTbl_status_04"
+                android:textColor="@color/white"
+                android:padding="2sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+            <!--Column 05-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/action_inventorytbl_05"
+                android:textColor="@color/white"
+                android:padding="2sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+        </TableRow>
+        <!--data-->
+        <TableRow
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp">
+
+            <!--Column 00-->
+            <TextView
+                android:id="@+id/col00_reqNo_reqTbl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="01"
+                android:textColor="@color/black"
+                android:padding="2sp"
+                android:textSize="10sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+            <!--Column 01-->
+            <TextView
+                android:id="@+id/col01_requester_reqTbl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Sand"
+                android:textColor="@color/black"
+                android:padding="2sp"
+                android:textSize="10sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+            <!--Column 02-->
+            <TextView
+                android:id="@+id/col02_site_reqTbl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="1000"
+                android:textColor="@color/black"
+                android:padding="2sp"
+                android:textSize="10sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+            <!--Column 03-->
+            <TextView
+                android:id="@+id/col03_reqDate_reqTbl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="1000"
+                android:textColor="@color/black"
+                android:padding="2sp"
+                android:textSize="10sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+            <!--Column 04-->
+            <TextView
+                android:id="@+id/col04_status_reqTbl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="1000"
+                android:textColor="@color/black"
+                android:padding="2sp"
+                android:textSize="10sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+            <!--Column 05-->
+            <Button
+                android:id="@+id/btnRqEdit"
+                android:layout_width="35dp"
+                android:layout_height="20dp"
+                android:background="@drawable/btn_back"
+                android:text="@string/btnEditTxt"
+                android:textSize="9sp"
+                app:layout_constraintTop_toBottomOf="@+id/inputPassword"
+                tools:ignore="TouchTargetSizeCheck" />
+            <Button
+                android:id="@+id/btnRqDelete"
+                android:layout_width="35dp"
+                android:layout_height="20dp"
+                android:background="@drawable/input_box"
+                android:text="@string/btnDeleteTxt"
+                android:textSize="9sp"
+                android:layout_marginRight="2dp"
+                app:layout_constraintTop_toBottomOf="@+id/inputPassword"
+                tools:ignore="TouchTargetSizeCheck" />
+
+
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>

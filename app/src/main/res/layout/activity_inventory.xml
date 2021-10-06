@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Inventory">
+
+    <!--Item Table (current inventory)-->
+
+    <TextView
+        android:id="@+id/inventoryHead01"
+        android:layout_width="247dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/inventoryDetHeading"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <TableLayout
+        android:id="@+id/inventoryTbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@android:color/white">
+
+        <!--Table headers-->
+        <TableRow android:background="@color/btnGreen">
+
+            <!--Column 00-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/itemID_inventorytbl_00"
+                android:textColor="@color/white"
+                android:padding="2sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+            <!--Column 01-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/item_inventorytbl_01"
+                android:textColor="@color/white"
+                android:padding="2sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+            <!--Column 02-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/unitPrice_inventorytbl_02"
+                android:textColor="@color/white"
+                android:padding="2sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+            <!--Column 03-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/inStock_inventorytbl_03"
+                android:textColor="@color/white"
+                android:padding="2sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+            <!--Column 04-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/rol_inventorytbl_04"
+                android:textColor="@color/white"
+                android:padding="2sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+            <!--Column 05-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/action_inventorytbl_05"
+                android:textColor="@color/white"
+                android:padding="2sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+        </TableRow>
+        <!--data-->
+        <TableRow
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp">
+
+            <!--Column 00-->
+            <TextView
+                android:id="@+id/col00_ItemIDTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="IT01"
+                android:textColor="@color/black"
+                android:padding="2sp"
+                android:textSize="10sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+            <!--Column 01-->
+            <TextView
+                android:id="@+id/col01_ItemTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Sand"
+                android:textColor="@color/black"
+                android:padding="2sp"
+                android:textSize="10sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+            <!--Column 02-->
+            <TextView
+                android:id="@+id/col02_UnitPriceTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="1000"
+                android:textColor="@color/black"
+                android:padding="2sp"
+                android:textSize="10sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+            <!--Column 03-->
+            <TextView
+                android:id="@+id/col03_inStockTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="101"
+                android:textColor="@color/black"
+                android:padding="2sp"
+                android:textSize="10sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+            <!--Column 04-->
+            <TextView
+                android:id="@+id/col04_rolTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="200"
+                android:textColor="@color/black"
+                android:padding="2sp"
+                android:textSize="10sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+            <!--Column 05-->
+            <Button
+                android:id="@+id/btnInventoryAdd"
+                android:layout_width="60dp"
+                android:layout_height="20dp"
+                android:background="@drawable/btn_back"
+                android:text="@string/addBtn"
+                android:textSize="9sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputPassword"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <!--Selected items table-->
+    <TextView
+        android:id="@+id/selectHeading"
+        android:layout_width="369dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="300dp"
+        android:text="@string/selectItemTblHeading"
+        android:textColor="@color/black"
+        android:textSize="16dp" />
+
+    <TableLayout
+        android:id="@+id/selectedItemTbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="320dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@android:color/white">
+
+        <!--Table headers-->
+        <TableRow android:background="@color/btnGreen">
+
+            <!--Column 00-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/item_sItemTbl_00"
+                android:textColor="@color/white"
+                android:padding="2sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+            <!--Column 01-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/qty_sItemTbl_01"
+                android:textColor="@color/white"
+                android:padding="2sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+            <!--Column 02-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/iPrice_sItemTbl_02"
+                android:textColor="@color/white"
+                android:padding="2sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"/>
+
+        </TableRow>
+        <!--data-->
+        <TableRow
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp">
+
+        <!--Column 00-->
+        <TextView
+            android:id="@+id/col00_sTblItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Sand"
+            android:textColor="@color/black"
+            android:padding="2sp"
+            android:textSize="10sp"
+            android:layout_weight="2"
+            android:gravity="center_horizontal"/>
+
+        <!--Column 01-->
+            <EditText
+                android:id="@+id/col01_sTblNeedQty_editText"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="2"
+                android:background="@drawable/input_box"
+                android:gravity="center_horizontal"
+                android:padding="2sp"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <!--Column 02-->
+        <TextView
+            android:id="@+id/col02_sTblIPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="1000"
+            android:textColor="@color/black"
+            android:padding="2sp"
+            android:textSize="10sp"
+            android:layout_weight="2"
+            android:gravity="center_horizontal"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btnInventorySave"
+        android:layout_width="143dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="600dp"
+        android:background="@drawable/btn_back"
+        android:text="@string/saveBtn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</RelativeLayout>
