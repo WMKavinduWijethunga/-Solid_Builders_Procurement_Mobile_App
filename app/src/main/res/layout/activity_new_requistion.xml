@@ -81,11 +81,38 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
-        android:id="@+id/commentsTxtView"
+        android:id="@+id/orderDateTxtView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginTop="250dp"
+        android:text="@string/orderDate"
+        android:textColor="@color/reqSubHeadGreen"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/inputOrderDate"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="270dp"
+        android:background="@drawable/input_box"
+        android:drawableEnd="@drawable/ic_datecal"
+        android:ems="10"
+        android:inputType="date"
+        android:paddingEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/commentsTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="320dp"
         android:text="@string/comments"
         android:textColor="@color/reqSubHeadGreen"
         android:textSize="15dp" />
@@ -96,10 +123,10 @@
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="270dp"
+        android:layout_marginTop="340dp"
         android:background="@drawable/input_box"
         android:ems="10"
-        android:inputType="date"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
@@ -111,7 +138,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="330dp"
+        android:layout_marginTop="400dp"
         android:text="@string/catTableHead"
         android:textColor="@color/black"
         android:textSize="16dp" />
@@ -120,7 +147,7 @@
         android:id="@+id/catalogueItemTbl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="420dp"
         android:layout_marginStart="35dp"
         android:layout_marginEnd="35dp"
         android:background="@android:color/white">
