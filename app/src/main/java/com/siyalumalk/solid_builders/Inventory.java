@@ -3,9 +3,15 @@ package com.siyalumalk.solid_builders;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
 public class Inventory extends AppCompatActivity {
 
@@ -40,5 +46,67 @@ public class Inventory extends AppCompatActivity {
         indicativePrice_selItemTblCol02 = findViewById(R.id.col02_sTblIPrice);
 
         btnInventorySave = findViewById(R.id.btnInventorySave);
+
+        btnInventorySave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String orderID = "5";
+                String strItemName = item_selItemTblCol00.getText().toString();
+                String strQty = needQty_selItemTblCol01.getText().toString();
+                String strPrice = indicativePrice_selItemTblCol02.getText().toString();
+
+                if(!strQty.equals("")){
+
+                    Handler handler = new Handler(Looper.getMainLooper());
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            String[] field = new String[4];
+                            field[0] = "purchOID";
+                            field[1] = "itemName";
+                            field[2] = "price";
+                            field[3] = "quantity";
+
+                            String[] data = new String[4];
+                            data[0] = orderID;
+                            data[1] = strItemName;
+                            data[2] = strPrice;
+                            data[3] = strQty;
+
+                            PutData putData = new PutData("http://192.168.8.189/SolidBuilders/addPurchaseOrderList.php", "POST", field, data);
+
+                            if(putData.startPut()){
+
+                                if(putData.onComplete()){
+
+                                    String result = putData.getResult();
+
+                                    if(result.equals("Purchase order items added successfully!")){
+
+                                        Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
+
+                                    }
+                                    else{
+
+                                        Toast.makeText(getApplicationContext(), "", Toast.LENGTH_SHORT).show();
+
+                                    }
+
+                                }
+
+                            }
+
+                        }
+                    });
+
+                }
+                else{
+                    Toast.makeText(getApplicationContext(), "Quantity field is required!", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
     }
 }
